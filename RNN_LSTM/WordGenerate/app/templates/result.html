@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generate Word</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style-2.css') }}">
+</head>
+<body>
+     <h2>Generated Text From 3 word "{{input_text}}"</h2>
+    <div id="generatedText"></div>
+     <script type="text/javascript">
+        const fullSentence = '{{ generated_words | tojson | safe }}';
+    </script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

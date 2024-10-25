@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Enter 3 Words to Start Text Generation</h1>
+    <form method="POST" action="/generate">
+        <input type="text" name="input_text" placeholder="Enter 3 words" required>
+        <button type="submit">Generate</button>
+    </form>
+</body>
